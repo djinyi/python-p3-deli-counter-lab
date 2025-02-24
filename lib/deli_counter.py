@@ -19,5 +19,9 @@ def take_a_number(queu, new_person):
         queu.append(new_person)
         print(f"Welcome, {new_person}. You are number {queu.index(new_person) +1} in line.")
     
-def now_serving():
-    pass
+def now_serving(queu):
+    if queu:
+        print(f"Currently serving {queu[0]}.")
+        del queu[0]
+    else:
+        print("There is nobody waiting to be served!")
